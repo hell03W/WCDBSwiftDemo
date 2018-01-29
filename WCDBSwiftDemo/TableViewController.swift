@@ -13,18 +13,27 @@ import SVProgressHUD
 let dbPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! + "/wcdb.db"
 
 class TableViewController: UITableViewController {
+    
+    /// 初始化一个searchbar
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 44))
+        searchBar.delegate = self
+        searchBar.placeholder = "输入想要搜索的名字"
+        searchBar.setShowsCancelButton(true, animated: true)
+        return searchBar
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.tableHeaderView = searchBar
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
         setupRefresh()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        dataArray = searchFor("")
-        tableView.reloadData()
+        pulldownAction()
     }
     
     /// 配置下拉刷新
@@ -36,14 +45,15 @@ class TableViewController: UITableViewController {
     }
     
     @objc func pulldownAction() {
-        dataArray = searchFor("")
+        let text = searchBar.text ?? ""
+        dataArray = searchFor(text)
         refreshControl?.endRefreshing()
         tableView.reloadData()
     }
     
     func searchFor(_ name: String = "") -> [Person]? {
         let db = Database(withPath: dbPath)
-        let persons: [Person]? = try? db.getObjects(fromTable: "PersonTable")
+        let persons: [Person]? = try? db.getObjects(on: Person.Properties.all, fromTable: "PersonTable", where: Person.Properties.name.like("%\(name)%"))
         return persons
     }
 
@@ -56,7 +66,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         if let person = dataArray?[indexPath.row] {
-            cell.textLabel?.text = "\(person.name)-\(person.sex)-\(person.age)"
+            cell.textLabel?.text = "\(person.name ?? "")-\(person.sex ?? "")-\(person.age ?? 0)"
         }
         return cell
     }
@@ -101,10 +111,32 @@ class TableViewController: UITableViewController {
     /// 编辑动作
     func editAction(indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let editController = sb.instantiateViewController(withIdentifier: "AddPersonController") as! AddPersonController
-        editController.title = "编辑"
-        editController.editType = .edit
-        navigationController?.pushViewController(editController, animated: true)
+        if let editController = sb.instantiateViewController(withIdentifier: "AddPersonController") as? AddPersonController {
+            editController.title = "编辑"
+            editController.editType = .edit
+            editController.person = dataArray?[indexPath.row]
+            navigationController?.pushViewController(editController, animated: true)
+        }else{
+            print("Cant find VC!")
+        }
     }
-
 }
+
+
+
+extension TableViewController: UISearchBarDelegate {
+    
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        dataArray = searchFor(searchText)
+        tableView.reloadData()
+    }
+    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+    }
+}
+
+
+
+
+
+

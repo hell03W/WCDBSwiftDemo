@@ -16,9 +16,13 @@ class Person: TableCodable {
         self.age = age
     }
     
-    var name: String
-    var sex: String
-    var age: Int
+    convenience init() {
+        self.init(name: "", sex: "", age: 0)
+    }
+    
+    var name: String?
+    var sex: String?
+    var age: Int?
     var id: Int?
     
     enum CodingKeys: String, CodingTableKey {

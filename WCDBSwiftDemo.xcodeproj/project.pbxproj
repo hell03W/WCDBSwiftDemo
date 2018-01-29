@@ -118,10 +118,10 @@
 		E162D519201EC7380094C19C /* WCDBSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E162D549201EC8D70094C19C /* AddPersonController.swift */,
+				E162D51A201EC7380094C19C /* AppDelegate.swift */,
 				E162D548201EC8D70094C19C /* Person.swift */,
 				E162D54A201EC8D70094C19C /* TableViewController.swift */,
-				E162D51A201EC7380094C19C /* AppDelegate.swift */,
+				E162D549201EC8D70094C19C /* AddPersonController.swift */,
 				E162D51C201EC7380094C19C /* ViewController.swift */,
 				E162D51E201EC7380094C19C /* Main.storyboard */,
 				E162D521201EC7380094C19C /* Assets.xcassets */,

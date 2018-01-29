@@ -29,7 +29,7 @@
         <!--世界名人录-->
         <scene sceneID="LX1-wc-NVb">
             <objects>
-                <tableViewController id="gml-OZ-vEF" customClass="TableViewController" customModule="TestWCDB" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="gml-OZ-vEF" customClass="TableViewController" customModule="WCDBSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MJq-Lc-i7D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,7 +67,7 @@
         <!--Add Person Controller-->
         <scene sceneID="FUQ-bR-gOg">
             <objects>
-                <viewController id="8MY-4b-Fda" customClass="AddPersonController" customModule="TestWCDB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="AddPersonController" storyboardIdentifier="AddPersonController" id="8MY-4b-Fda" customClass="AddPersonController" customModule="WCDBSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="AddPersonController" id="8ka-G2-XIV" userLabel="AddPersonController">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
