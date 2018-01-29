@@ -1,0 +1,17 @@
+PODS:
+  - SVProgressHUD (2.2.2)
+  - WCDB.swift (1.0.6):
+    - WCDB.swift/sqlcipher (= 1.0.6)
+  - WCDB.swift/sqlcipher (1.0.6)
+
+DEPENDENCIES:
+  - SVProgressHUD
+  - WCDB.swift
+
+SPEC CHECKSUMS:
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  WCDB.swift: 5bb038bc5bb46067cccc7c48392e8f4c4a15def0
+
+PODFILE CHECKSUM: d52a46c8bb71eefd2bf8403c4b94a07762343017
+
+COCOAPODS: 1.1.1

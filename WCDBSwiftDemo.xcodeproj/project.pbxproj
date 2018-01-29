@@ -14,6 +14,10 @@
 		E162D525201EC7380094C19C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E162D523201EC7380094C19C /* LaunchScreen.storyboard */; };
 		E162D530201EC7380094C19C /* WCDBSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162D52F201EC7380094C19C /* WCDBSwiftDemoTests.swift */; };
 		E162D53B201EC7380094C19C /* WCDBSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162D53A201EC7380094C19C /* WCDBSwiftDemoUITests.swift */; };
+		E162D54B201EC8D70094C19C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162D548201EC8D70094C19C /* Person.swift */; };
+		E162D54C201EC8D70094C19C /* AddPersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162D549201EC8D70094C19C /* AddPersonController.swift */; };
+		E162D54D201EC8D70094C19C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162D54A201EC8D70094C19C /* TableViewController.swift */; };
+		F96CE8C0BA26F5771465D6AA /* Pods_WCDBSwiftDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DD4C41649E23A4A1C66497 /* Pods_WCDBSwiftDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07DD4C41649E23A4A1C66497 /* Pods_WCDBSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCDBSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8681F9B7A6C0AB8C6C94EB0E /* Pods-WCDBSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCDBSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WCDBSwiftDemo/Pods-WCDBSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D26FF5E697AFF7D725B57D47 /* Pods-WCDBSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCDBSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCDBSwiftDemo/Pods-WCDBSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E162D517201EC7380094C19C /* WCDBSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCDBSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E162D51A201EC7380094C19C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E162D51C201EC7380094C19C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,9 @@
 		E162D536201EC7380094C19C /* WCDBSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WCDBSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E162D53A201EC7380094C19C /* WCDBSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDBSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		E162D53C201EC7380094C19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E162D548201EC8D70094C19C /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E162D549201EC8D70094C19C /* AddPersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPersonController.swift; sourceTree = "<group>"; };
+		E162D54A201EC8D70094C19C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F96CE8C0BA26F5771465D6AA /* Pods_WCDBSwiftDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D39B60B41F5168815073DE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07DD4C41649E23A4A1C66497 /* Pods_WCDBSwiftDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E162D50E201EC7380094C19C = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +100,8 @@
 				E162D52E201EC7380094C19C /* WCDBSwiftDemoTests */,
 				E162D539201EC7380094C19C /* WCDBSwiftDemoUITests */,
 				E162D518201EC7380094C19C /* Products */,
+				E3AABDFDC07BE493CB67D955 /* Pods */,
+				4D39B60B41F5168815073DE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +118,9 @@
 		E162D519201EC7380094C19C /* WCDBSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E162D549201EC8D70094C19C /* AddPersonController.swift */,
+				E162D548201EC8D70094C19C /* Person.swift */,
+				E162D54A201EC8D70094C19C /* TableViewController.swift */,
 				E162D51A201EC7380094C19C /* AppDelegate.swift */,
 				E162D51C201EC7380094C19C /* ViewController.swift */,
 				E162D51E201EC7380094C19C /* Main.storyboard */,
@@ -125,6 +149,15 @@
 			path = WCDBSwiftDemoUITests;
 			sourceTree = "<group>";
 		};
+		E3AABDFDC07BE493CB67D955 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D26FF5E697AFF7D725B57D47 /* Pods-WCDBSwiftDemo.debug.xcconfig */,
+				8681F9B7A6C0AB8C6C94EB0E /* Pods-WCDBSwiftDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E162D53F201EC7380094C19C /* Build configuration list for PBXNativeTarget "WCDBSwiftDemo" */;
 			buildPhases = (
+				996CD327E7912366D4A54B28 /* [CP] Check Pods Manifest.lock */,
 				E162D513201EC7380094C19C /* Sources */,
 				E162D514201EC7380094C19C /* Frameworks */,
 				E162D515201EC7380094C19C /* Resources */,
+				9BE2F94B0D4849585794A901 /* [CP] Embed Pods Frameworks */,
+				D491E099E8F69DA629A1AE05 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,12 +290,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		996CD327E7912366D4A54B28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9BE2F94B0D4849585794A901 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCDBSwiftDemo/Pods-WCDBSwiftDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D491E099E8F69DA629A1AE05 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WCDBSwiftDemo/Pods-WCDBSwiftDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E162D513201EC7380094C19C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E162D54C201EC8D70094C19C /* AddPersonController.swift in Sources */,
+				E162D54B201EC8D70094C19C /* Person.swift in Sources */,
 				E162D51D201EC7380094C19C /* ViewController.swift in Sources */,
+				E162D54D201EC8D70094C19C /* TableViewController.swift in Sources */,
 				E162D51B201EC7380094C19C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,10 +511,13 @@
 		};
 		E162D540201EC7380094C19C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D26FF5E697AFF7D725B57D47 /* Pods-WCDBSwiftDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJF46GBGJQ;
 				INFOPLIST_FILE = WCDBSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walden.WCDBSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -438,10 +528,13 @@
 		};
 		E162D541201EC7380094C19C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8681F9B7A6C0AB8C6C94EB0E /* Pods-WCDBSwiftDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HJF46GBGJQ;
 				INFOPLIST_FILE = WCDBSwiftDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.walden.WCDBSwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

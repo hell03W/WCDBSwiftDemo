@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  WCDBSwiftDemo
+//  TestWCDB
 //
-//  Created by Walden on 2018/1/29.
+//  Created by Walden on 2018/1/12.
 //  Copyright © 2018年 Walden. All rights reserved.
 //
 
